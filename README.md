@@ -1,7 +1,7 @@
 # MmQL - The Mathematical Query Language 
 
 > [!NOTE]
-> ***This codebase will soon be rewritten in rust and this repo will be archived after it is done.***
+> ***I have stopped working on this project and will be rewritten in Rust and it will have more killer features (Inshallah), After my other [project](https://github.com/mtalha-codes/roobs-kitchen-rs) (through which I am gonna learn Practical Rust), which is also rewrite of my another C++ [project](https://github.com/mtalha-codes/roobs-kitchen-cpp).***
 
 **MmQL** is a very lightweight computational query language used to compute operations involving real and complex numbers (the queries are interpreted by **MmQLC**) developed purely in **C++23**.
 
