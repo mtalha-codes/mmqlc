@@ -1,4 +1,8 @@
 # Future Plans
+
+> [!IMPORTANT]
+> As, I have started learning Rust, so to master rust from in an out I will have to do some projects (obviously 😁 !), due to lack of ideas, I will re-write and improve some of my C++ projects in Rust, so there is possibility that you might not see these feature in the C++ version of the project as I have transitioned to Rust.
+
 With the passage of time, I will add the following features to **MmQLC**. The details are as follows: 
 
 - **Better Project Directory Structure.** 
