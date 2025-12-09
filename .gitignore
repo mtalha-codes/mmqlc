@@ -50,3 +50,7 @@ _deps
 
 #.CMAKELISTS_FOR_WINDOWS
 cmake-list-windows
+
+#VCPKG INSTALLED 
+vcpkg_installed
+.cache 
