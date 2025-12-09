@@ -1,27 +1,49 @@
-# MmQL - The Mathematical Query Language 
+<!--toc:start-->
+- [MmQL - The Mathematical Query Language](#mmql-the-mathematical-query-language)
+  - [What is MmQL ?](#what-is-mmql)
+  - [What is MmQLC ?](#what-is-mmqlc)
+  - [Key Features](#key-features)
+  - [Why Choose MmQL?](#why-choose-mmql)
+  - [Dependencies](#dependencies)
+  - [Setting Up The Environment for Building From Source](#setting-up-the-environment-for-building-from-source)
+  - [Supported Queries](#supported-queries)
+    - [[Queries For Calculations Involving Real Numbers](DetailedDocs/REAL_NUMBERS.md)](#queries-for-calculations-involving-real-numbersdetaileddocsrealnumbersmd)
+    - [[Queries For Calculations Involving Complex Numbers](DetailedDocs/COMPLEX_NUMBERS.md)](#queries-for-calculations-involving-complex-numbersdetaileddocscomplexnumbersmd)
+  - [Comments in MmQL](#comments-in-mmql)
+  - [Possible Errors](#possible-errors)
+    - [Examples of errors](#examples-of-errors)
+  - [Our Intentions Regarding this Project](#our-intentions-regarding-this-project)
+  - [License](#license)
+    - [Key Restrictions](#key-restrictions)
+<!--toc:end-->
+
+# MmQL - The Mathematical Query Language
 
 > [!NOTE]
-> ***I have stopped working on this project and will be rewritten in Rust and it will have more killer features (Inshallah), After my other [project](https://github.com/mtalha-codes/roobs-kitchen-rs) (through which I am gonna learn Practical Rust), which is also rewrite of my another C++ [project](https://github.com/mtalha-codes/roobs-kitchen-cpp).***
+> ***I have stopped working on this project and will be rewritten in Rust (After I Learn Rust) and it will have more killer features (Inshallah).***
 
-**MmQL** is a very lightweight computational query language used to compute operations involving real and complex numbers (the queries are interpreted by **MmQLC**) developed purely in **C++23**.
+**MmQL** is a very lightweight computational query language used to compute operations involving real and complex numbers (the queries are interpreted by **MmQLC**) developed in **C++20**.
 
 ---
 
 ## What is MmQL ?
+
 **MmQL** is an acronym that stands for **M**athe**m**atical **Q**uery **L**anguage. It is an interpreted language as well as a case-sensitive **where uppercase and  lowercase matters**. The interpreter (**MmQLC**) is a custom and yet a very simple interpreter. Techniques like Tokenization and Parsing are used by **MmQLC**.
 
 **MmQL** is a lightweight, *cross-platform* query language tailored for mathematical computations. Designed for speed and simplicity, **MmQL** allows users to write precise mathematical queries.
 > [!NOTE]
+>
 > - Please note that **MmQL** is not a symbolic language, and it does not use CAS (Computer Algebra Systems)
 > - **MmQL** is a unique because it does not use an **Abstract Syntax Tree**.
 
 ---
 
-# What is MmQLC ?  
+## What is MmQLC ?  
 
 **MmQLC** stands for **M**athe**m**atical **Q**uery **L**anguage **C**ompiler (although this is an interpreter 😁). It is a **case-sensitive** interpreted query language with a minimalistic syntax, focused on mathematical operations.  
 
-### Key Features:  
+## Key Features  
+
 - **Portable and Cross-Platform:** The language can run on various platforms by compiling its interpreter for your operating system.  
 - **Lightweight and Efficient:** Perfect for quick and resource-friendly computations.  
 - **Case-Sensitive Syntax:** Commands are interpreted based on their casing.  
@@ -36,6 +58,7 @@
 ## Why Choose MmQL?  
 
 **MmQL** provides a lightweight and flexible environment for mathematical queries, perfect for students and professionals looking for:  
+
 - A **simple and efficient query language** for real and complex number calculations.  
 - A **cross-platform tool**, for any operating system (Windows, Linux and Mac) via compilation.  
 
@@ -44,124 +67,74 @@ With its clean syntax and custom interpreter, **MmQL** delivers a tailored solut
 ---
 
 ## Dependencies
-This project depends upon the following libraries
-They are as follows:
-- [ ] Boost C++ Library
-- [ ] GNU GMP Library 
-- [ ] MPFR Library 
-- [ ] FMT Library
+
+This project has the following dependencies:
+
+- [X] **components: {multiprecision,math}** from Boost C++ Library
+- [X] GNU GMP Library
+- [X] MPFR Library
+- [X] FMT Library
+
+This project also have the following build dependencies:
+
+- **gcc** or **clang** complete toolchain. **clangd** is recommended but not necessary.
+- **cmake** should be installed and properly configured.
+- **vcpkg** should be installed and properly configured as per your toolchain.
+- **vcpkg**  should be exposed to **cmake** via ***VCPKG_ROOT*** environment variable.
 
 ---
 
 ## Setting Up The Environment for Building From Source  
-### Windows:  
-> [!IMPORTANT]  
-> - [X] **Download And Install MSYS2**. Click [**this**](https://github.com/msys2/msys2-installer/releases/download/2025-02-21/msys2-x86_64-20250221.exe) to start downloading !.
-> - [X] After Installation, A **UCRT64** Environment will open up for you, Enter the following commands one by one.
-> ```bash  
-> pacman -Syu # Updates the package database for latest metadata.  
-> pacman -S mingw-w64-ucrt-x86_64-gcc # Install Latest version of GNU GCC Compiler.
-> pacman -S mingw-w64-ucrt-x86_64-fmt # Installs FMT.
-> pacman -S mingw-w64-ucrt-x86_64-boost # Installs Boost.  
-> ```  
-> - [X] Edit both top-level and inner `CMakeLists.txt` files to match your library paths.  
-> - [X] Install `scoop`:  
-> ```powershell  
-> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  
-> Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression  
-> ```  
-> - [X] Install `cmake` via `scoop`:  
-> ```powershell  
-> scoop install main/cmake  
-> ```  
-> - [X] Install `make` via `scoop`:  
-> ```powershell  
-> scoop install main/make  
-> ```  
+>
+> [!WARNING]
+> Only 64 bit x86 and ARM architectures are supported. We don't plan to support other architectures.
 
-🎉 Congratulations! 🎉  
-You have set up the environment for building **MmQLC** for Windows.  
+Building from source is dead simple, just launch your default terminal.
 
----
-
-### MacOS:  
-> [!IMPORTANT]  
-> - [X] **Install Homebrew**. Watch this [guide](https://brew.sh/) for installation instructions.  
-> - [X] **Don't close your terminal yet! Paste these commands one by one:**  
-> ```bash  
-> brew update # Updates the package database for latest metadata.  
-> brew install gcc # Installs GCC compiler.  
-> brew install gmp mpfr fmt boost cmake make # Installs all required libraries and tools.  
-> ```  
-> - [X] Add the base **dir** of `boost` as a new **environment variable(if needed)**.  
-> - [X] Edit both top-level and inner `CMakeLists.txt` files to match your library paths.  
-
-🎉 Congratulations! 🎉  
-You have set up the environment for building **MmQLC** for macOS.  
-
----
-
-### Linux(Arch Linux):  
-> [!IMPORTANT]  
-> - [X] **Install dependencies**. Open your terminal and paste these commands one by one:  
-> ```bash  
-> sudo pacman -Sy # Update Package Database
-> sudo -S boost mpfr fmt gmp. # Install Dependencies.  
-> ```
-> - [X] Edit both top-level and inner `CMakeLists.txt` files to match your library paths.  
-
-🎉 Congratulations! 🎉  
-You have set up the environment for building **MmQLC** for Linux.  
-
----
-
-### Step-By-Step Easy Building Procedure (Same on All OS):
 ```bash
-mkdir build && cd build
-cmake ..
-make -j$(nproc)
+# Clone this repo 
+git clone https://github.com/mtalha-codes/mmqlc.git
+# navigate to repo
+cd mmqlc
+# download dependencies or libraries
+vcpkg install 
+# generate build scripts
+cmake .
+# compile and navigate to build directory
+make -j$(nproc) && cd build
+# run the interpreter.
+./mmqlc --live
 ```
 
----
-
-## Using the MmQL Language For Calculations
-
-**MmQL**  is pretty simple to use , just download either the installer(**Windows**) from **Release** section or the source code **(If you want to build it for yourself.)(Other than Windows)**
-- First of all write queries by using text editor.
-- Now for generation of answer file then you should run **MmQLC.exe** with special command line **arguments** defined for **MmQLC** The method for generating answer file from a query file is explained [**Here.**](DetailedDocs/MMQLC_USE.md)
-- To view or see the answers, open the **.ans** in any text editor.
-
->- **MmQLC v2.2+** also includes a sophisticated **REPL** mode if you want direct calculations.
-
- > [!NOTE]
- > - Consider adding **MmQLC.exe** to your environment variables for running it from the shell directly. Click  [**Here**](https://www.youtube.com/watch?v=z84UIZy_qgE) if you don't know how to do it.
-
-
->[!NOTE]
-> There will be no installer in the future. Building from source is recommended.
----
-
 ## Supported Queries
+
 Following types of queries are supported by **MmQL**.
-- ### Queries For Calculations Involving Real Numbers. Click [**Here**](DetailedDocs/REAL_NUMBERS.md) to see.
-- ### Queries For Calculations Involving Complex Numbers. Click [**Here**](DetailedDocs/COMPLEX_NUMBERS.md) to see.
+
+- ### [Queries For Calculations Involving Real Numbers](DetailedDocs/REAL_NUMBERS.md)
+
+- ### [Queries For Calculations Involving Complex Numbers](DetailedDocs/COMPLEX_NUMBERS.md)
 
 ---
 
 ## Comments in MmQL
+
 The MmQL language only support single-line comments.
 
-**Comment Declaration**: 
+**Comment Declaration**:
 Comments looks like this
+
 - `%% Comment`
 
 ---
 
 ## Possible Errors
+>
 > [!CAUTION]
 Compound queries or stacking multiple queries on a single line may cause errors.
 Nesting two or more queries or using inline comments will also throw errors.
-### Examples of errors:
+
+### Examples of errors
+
 - Compound Queries: `ADD 3,4 FACTORIAL 43`. This is strictly prohibited.
 - Direct Nested Queries: `FACTORIAL ADD 3,4` , `INVERSE_SINE SINE 45`. Can be tackled via variables.
 - Inline Comments: `ADD 4,5 %% add two numbers`. Work In Progress.
@@ -169,15 +142,17 @@ Nesting two or more queries or using inline comments will also throw errors.
 ---
 
 ## Our Intentions Regarding this Project
-You can read about it [**here**](DetailedDocs/PLANS.md)
+
+[You can read about it here.](DetailedDocs/PLANS.md)
 
 ## License
-This project is protected under a custom license. You are permitted to clone this repository for learning purposes only. 
 
-### Key Restrictions:
-1. Forking, redistribution, or creating derivative works is prohibited.
+This project is protected under a custom license. You are permitted to clone this repository for learning purposes only.
+
+### Key Restrictions
+
+1. Forking and redistribution without permission is prohibited.
 2. The code may not be used for your academic submissions (e.g., final year projects, assignments) or included in resumes/portfolios except the owner(which is ME).
-3. Contributions are allowed only with prior written permission. Email **muhammadtalha.quant@gmail.com**
+3. Contributions are allowed only with prior written permission. Email **<muhammadtalha.quant@gmail.com>**
 
-For more details, see the [LICENSE](LICENSE) file.
----
+[For more details on license, click to read it](./LICENSE)
