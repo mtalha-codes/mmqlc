@@ -1,22 +1,3 @@
-<!--toc:start-->
-- [MmQL - The Mathematical Query Language](#mmql-the-mathematical-query-language)
-  - [What is MmQL ?](#what-is-mmql)
-  - [What is MmQLC ?](#what-is-mmqlc)
-  - [Key Features](#key-features)
-  - [Why Choose MmQL?](#why-choose-mmql)
-  - [Dependencies](#dependencies)
-  - [Setting Up The Environment for Building From Source](#setting-up-the-environment-for-building-from-source)
-  - [Supported Queries](#supported-queries)
-    - [[Queries For Calculations Involving Real Numbers](DetailedDocs/REAL_NUMBERS.md)](#queries-for-calculations-involving-real-numbersdetaileddocsrealnumbersmd)
-    - [[Queries For Calculations Involving Complex Numbers](DetailedDocs/COMPLEX_NUMBERS.md)](#queries-for-calculations-involving-complex-numbersdetaileddocscomplexnumbersmd)
-  - [Comments in MmQL](#comments-in-mmql)
-  - [Possible Errors](#possible-errors)
-    - [Examples of errors](#examples-of-errors)
-  - [Our Intentions Regarding this Project](#our-intentions-regarding-this-project)
-  - [License](#license)
-    - [Key Restrictions](#key-restrictions)
-<!--toc:end-->
-
 # MmQL - The Mathematical Query Language
 
 > [!NOTE]
