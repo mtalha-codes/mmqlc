@@ -27,7 +27,7 @@ jobs:
           git clone https://github.com/microsoft/vcpkg.git vcpkg
           if [ "${{ matrix.os }}" == "windows-latest" ]; then
             vcpkg/bootstrap-vcpkg.bat
-            vcpkg/vcpkg install --triplet x64-windows
+            vcpkg/vcpkg install --triplet x64-windows-static
           else
             ./vcpkg/bootstrap-vcpkg.sh
             ./vcpkg/vcpkg install --triplet x64-linux
@@ -36,17 +36,14 @@ jobs:
 
       - name: Configure CMake
         run: |
-          mkdir -p build
-          cd build
           if [ "${{ matrix.os }}" == "windows-latest" ]; then
-            cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+            cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
           else
-            cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
+            cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
           fi
 
       - name: Build
         run: |
-          cd build
           if [ "${{ matrix.os }}" == "windows-latest" ]; then
             cmake --build . --config Release --parallel
           else
