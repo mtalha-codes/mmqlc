@@ -4,9 +4,14 @@ if(DEFINED ENV{VCPKG_ROOT})
   if(CMAKE_HOST_SYSTEM_NAME STREQUAL "Linux") # checks OS
     if(CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "x86_64")
       # checks for achitecture, x86 archtecture 64bit
-      set(Boost_DIR "../vcpkg_installed/x64-linux/share/boost/")
+      if(CMAKE_CXX_COMPILER STREQUAL "x86_64-w64-mingw32-g++")
+        set(Boost_DIR "../vcpkg_installed/x64-mingw-static/share/boost/")
+      elseif(CMAKE_CXX_COMPILER STREQUAL "g++" OR CMAKE_CXX_COMPILER STREQUAL "clang++")
+        set(Boost_DIR "../vcpkg_installed/x64-linux/share/boost/")
+      endif()
     elseif(CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL "aarch64")
       # chekcs for architecture, arm architecutre 64bit
+      # cross compiling from linux to windows on ARM CPUs is not supported by this project
       set(Boost_DIR "../vcpkg_installed/arm64-linux/share/boost/")
     else()
       message("Error: Unknown CPU Architecture !")
