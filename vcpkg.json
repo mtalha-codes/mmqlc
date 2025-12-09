@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    "boost-math",
+    "boost-multiprecision",
+    "gmp",
+    "mpfr",
+    "fmt"
+  ]
+}
