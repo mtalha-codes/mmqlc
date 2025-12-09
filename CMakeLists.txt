@@ -1,12 +1,8 @@
-# This is the default Linux Specific Configuration for Linux
-# I use Arch Linux With Desktop Environment as LXQt
-
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.40)
 project(mmqlc)
-set(CMAKE_CXX_STANDARD 23) # C++ standard version
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
-endif()
-#set(CMAKE_EXE_LINKER_FLAGS "-static")
-add_subdirectory(src MmQLC)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_subdirectory(src build)
