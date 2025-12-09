@@ -1,0 +1,61 @@
+name: Build mmqlc
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up CMake
+        uses: lukka/get-cmake@v4
+        with:
+          version: "3.27.3"
+
+      - name: Install dependencies (vcpkg)
+        run: |
+          git clone https://github.com/microsoft/vcpkg.git vcpkg
+          if [ "${{ matrix.os }}" == "windows-latest" ]; then
+            vcpkg/bootstrap-vcpkg.bat
+            vcpkg/vcpkg install boost-math boost-multiprecision fmt gmp mpfr --triplet x64-windows
+          else
+            ./vcpkg/bootstrap-vcpkg.sh
+            ./vcpkg/vcpkg install boost-math boost-multiprecision fmt gmp mpfr --triplet x64-linux
+          fi
+        shell: bash
+
+      - name: Configure CMake
+        run: |
+          mkdir -p build
+          cd build
+          if [ "${{ matrix.os }}" == "windows-latest" ]; then
+            cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+          else
+            cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
+          fi
+
+      - name: Build
+        run: |
+          cd build
+          if [ "${{ matrix.os }}" == "windows-latest" ]; then
+            cmake --build . --config Release --parallel
+          else
+            make -j$(nproc)
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: mmqlc-binaries-${{ matrix.os }}
+          path: |
+            build/mmqlc${{ runner.os == 'Windows' && '.exe' || '' }}
