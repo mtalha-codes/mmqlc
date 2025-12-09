@@ -27,10 +27,10 @@ jobs:
           git clone https://github.com/microsoft/vcpkg.git vcpkg
           if [ "${{ matrix.os }}" == "windows-latest" ]; then
             vcpkg/bootstrap-vcpkg.bat
-            vcpkg/vcpkg install boost-math boost-multiprecision fmt gmp mpfr --triplet x64-windows
+            vcpkg/vcpkg install --triplet x64-windows
           else
             ./vcpkg/bootstrap-vcpkg.sh
-            ./vcpkg/vcpkg install boost-math boost-multiprecision fmt gmp mpfr --triplet x64-linux
+            ./vcpkg/vcpkg install --triplet x64-linux
           fi
         shell: bash
 
