@@ -1,27 +1,19 @@
-/*
- * Filename: mmqlc.parser.hpp
- * Author: Muhammad Talha
- * Github: MTalha-Codes
- * Repository: mmqlc
- * Copyright(C) - 2024
- * */
-
-#ifndef MMQLC_PARSER_HPP
-#define MMQLC_PARSER_HPP
+#ifndef PARSER_HPP
+#define PARSER_HPP
 
 #include "../lexer/Lexer.hpp"
-#include "constants.hpp"
+#include "../core/helpers/constants.hpp"
 #include "../core/helpers/boost_fwd.hpp"
 #include <complex>
 #include <utility>
 
-class parser {
+class Parser {
     std::vector<std::tuple<std::string, std::string, std::string> > raw_tokens;
     std::vector<std::tuple<std::string, float1000, float1000> > realNum_parsed;
-    std::vector<std::tuple<std::string, complex_float1000, complex_float1000> > complexNums_parsed;
+    std::vector<std::tuple<std::string, complex1000, complex1000> > complexNums_parsed;
 
     static float1000 STOD(const std::string &num) {
-        if (std::smatch matches; std::regex_match(num, matches, regex::numbers::realNum))
+        if (std::smatch matches; std::regex_match(num, matches, grammar::numbers::realNum))
             return float1000(matches[1].str());
         else if (num.empty())
             return {0};
@@ -29,11 +21,11 @@ class parser {
             throw std::invalid_argument("No Number ??");
     }
 
-    static complex_float1000 convert_to_complex(const std::string &cmplx_num) {
-        if (std::smatch matches; std::regex_match(cmplx_num, matches, regex::numbers::complexNum)) {
+    static complex1000 convert_to_complex(const std::string &cmplx_num) {
+        if (std::smatch matches; std::regex_match(cmplx_num, matches, grammar::numbers::complexNum)) {
             const float1000 realPart(matches[2].str());
             const float1000 imagPart(matches[7].str());
-            complex_float1000 complex1(realPart, imagPart);
+            complex1000 complex1(realPart, imagPart);
             return complex1;
         } else if (cmplx_num.empty()) {
             return {float1000(0), float1000(0)};
@@ -42,12 +34,12 @@ class parser {
     }
 
 public:
-    explicit parser(const std::vector<std::string> &queries,
+    explicit Parser(const std::vector<std::string> &queries,
                     const std::unordered_map<std::string, std::string> &varMap = {}) {
         raw_tokens = tokenize(queries, varMap);
     }
 
-    explicit parser(const std::vector<std::tuple<std::string, std::string, std::string> > &token) {
+    explicit Parser(const std::vector<std::tuple<std::string, std::string, std::string> > &token) {
         raw_tokens = token;
     }
 
@@ -57,12 +49,12 @@ public:
                     float1000 fOperand(0);
             [[maybe_unused]]
                     float1000 sOperand(0);
-            std::string queryToken = std::get<0>(raw_token);
+            std::string queryToken = std::get < 0 > (raw_token);
             if (queryToken == "GET") {
-                std::string full = "GET " + std::get<1>(raw_token) + " = ";
+                std::string full = "GET " + std::get < 1 > (raw_token) + " = ";
                 try {
-                    auto s = STOD(std::get<2>(raw_token));
-                    full += std::get<2>(raw_token);
+                    auto s = STOD(std::get < 2 > (raw_token));
+                    full += std::get < 2 > (raw_token);
                 } catch (...) {
                     continue;
                 }
@@ -70,15 +62,15 @@ public:
                 continue;
             }
             try {
-                fOperand = STOD(std::get<1>(raw_token));
-                sOperand = STOD(std::get<2>(raw_token));
+                fOperand = STOD(std::get < 1 > (raw_token));
+                sOperand = STOD(std::get < 2 > (raw_token));
             } catch (...) {
                 continue;
             }
             if (queryToken == "ERROR") {
                 realNum_parsed.emplace_back(queryToken, ZERO, ZERO);
             }
-            if (std::get<2>(raw_token).empty()) {
+            if (std::get < 2 > (raw_token).empty()) {
                 realNum_parsed.emplace_back(queryToken, fOperand, ZERO);
             } else {
                 realNum_parsed.emplace_back(queryToken, fOperand, sOperand);
@@ -87,16 +79,16 @@ public:
         return realNum_parsed;
     }
 
-    std::vector<std::tuple<std::string, complex_float1000, complex_float1000> > parse_cmplxNums() {
+    std::vector<std::tuple<std::string, complex1000, complex1000> > parse_cmplxNums() {
         for (const auto &raw_token: raw_tokens) {
-            complex_float1000 fOperand(float1000(0), float1000(0));
-            complex_float1000 sOperand(float1000(0), float1000(0));
-            std::string queryToken = std::get<0>(raw_token);
+            complex1000 fOperand(float1000(0), float1000(0));
+            complex1000 sOperand(float1000(0), float1000(0));
+            std::string queryToken = std::get < 0 > (raw_token);
             if (queryToken == "GET") {
-                std::string full = "GET " + std::get<1>(raw_token) + " = ";
+                std::string full = "GET " + std::get < 1 > (raw_token) + " = ";
                 try {
-                    auto s = convert_to_complex(std::get<2>(raw_token));
-                    full += std::get<2>(raw_token);
+                    auto s = convert_to_complex(std::get < 2 > (raw_token));
+                    full += std::get < 2 > (raw_token);
                 } catch (...) {
                     continue;
                 }
@@ -104,15 +96,15 @@ public:
                 continue;
             }
             try {
-                fOperand = convert_to_complex(std::get<1>(raw_token));
-                sOperand = convert_to_complex(std::get<2>(raw_token));
+                fOperand = convert_to_complex(std::get < 1 > (raw_token));
+                sOperand = convert_to_complex(std::get < 2 > (raw_token));
             } catch (...) {
                 continue;
             }
             if (queryToken == "ERROR") {
                 complexNums_parsed.emplace_back(queryToken, zero, zero);
             }
-            if (std::get<2>(raw_token).empty()) {
+            if (std::get < 2 > (raw_token).empty()) {
                 complexNums_parsed.emplace_back(queryToken, fOperand, zero);
             } else {
                 complexNums_parsed.emplace_back(queryToken, fOperand, sOperand);

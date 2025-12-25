@@ -1,4 +1,4 @@
-module CLInterface;
+#include "CLInterface.hpp"
 #include "../vresolver/VResolver.hpp"
 #include "fmt/color.h"
 
