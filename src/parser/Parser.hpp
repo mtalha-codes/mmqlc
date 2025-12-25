@@ -9,9 +9,9 @@
 #ifndef MMQLC_PARSER_HPP
 #define MMQLC_PARSER_HPP
 
-#include "mmqlc.tokenizer.hpp"
-#include "mmqlc.constants.hpp"
-#include "mmqlc.multiprecision.hpp"
+#include "../lexer/Lexer.hpp"
+#include "constants.hpp"
+#include "../core/helpers/boost_fwd.hpp"
 #include <complex>
 #include <utility>
 

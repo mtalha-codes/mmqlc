@@ -9,9 +9,9 @@
 #ifndef MMQLC_FUNCTIONS_HPP
 #define MMQLC_FUNCTIONS_HPP
 
-#include "mmqlc.constants.hpp"
+#include "constants.hpp"
 #include <cmath>
-#include "mmqlc.multiprecision.hpp"
+#include "boost_fwd.hpp"
 
 
 namespace math::functions::realTrig {

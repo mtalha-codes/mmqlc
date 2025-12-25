@@ -10,7 +10,7 @@
 #ifndef MMQLC_VARIABLES_HPP
 #define MMQLC_VARIABLES_HPP
 
-#include "mmqlc.calculator.hpp"
+#include "../core/Core.hpp"
 
 inline std::unordered_map<std::string, std::string> find_and_resolve_vars(
     const std::vector<std::string> &queries, const std::unordered_map<std::string, std::string> &varMAP = {}) {

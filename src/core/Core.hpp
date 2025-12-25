@@ -11,8 +11,8 @@
 
 #include <type_traits>
 #include <stdexcept>
-#include "mmqlc.parser.hpp"
-#include "mmqlc.functions.hpp"
+#include "../headers/Parser.hpp"
+#include "../headers/functions.hpp"
 
 namespace rt = math::functions::realTrig; // namespace alias for realTrig;
 namespace ct = math::functions::complexTrig; // namespace alias for complexTrig;
