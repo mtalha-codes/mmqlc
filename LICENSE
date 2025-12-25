@@ -1,15 +1,63 @@
-Copyright [Muhammad Talha/MTalha-Codes] [2024]
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
 
-Permission is hereby granted to any person to view and clone this repository for personal and non-commercial purposes, subject to the following restrictions:
+Copyright (C) 2026-27 Muhammad Talha
+GitHub: https://github.com/mtalha-codes
 
-1. The code may not be forked, sublicensed, distributed, or publicly modified.
-2. The code may not be used for academic submissions, including but not limited to projects, assignments, or final year projects, without explicit written permission from the author.
-3. The code may not be claimed as part of any individual’s portfolio, resume, or work experience.
-4. The code may not be redistributed in any form, including creating derivative repositories or projects, without explicit written permission.
-5. All copies of the code must retain this copyright notice.
-6. Releases of the software may be shared freely but only in their original, unmodified form.
-7. Contributions to this repository are only permitted under the following conditions:
-   - Anyone wishing to contribute to this repository must send an email to [khankkhan123apsacs@gmail.com] and receive explicit written permission from the author.
-   - Contributions without prior approval will not be accepted or merged.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or any later version.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+----------------------------------------------------------------------
+ADDITIONAL TERMS AND RESTRICTIONS (PURSUANT TO AGPLv3 SECTION 7)
+----------------------------------------------------------------------
+
+The following additional terms apply to this software and are expressly
+imposed by the copyright holder, Muhammad Talha ("the Owner"):
+
+1. Academic Use Restriction
+   This software, in whole or in part, MAY NOT be used for academic
+   submissions of any kind, including but not limited to:
+   - Assignments
+   - Lab work
+   - Projects
+   - Capstone projects
+   - Final year projects (FYPs)
+   - Theses or dissertations
+
+   This restriction applies to all educational institutions, formal or
+   informal, worldwide.
+
+2. Resume and Portfolio Restriction
+   This software, in whole or in part, MAY NOT be referenced, showcased,
+   summarized, or included in resumes, CVs, personal portfolios, or
+   professional profiles by any individual or entity other than the
+   Owner.
+
+3. Permitted Use and Sole Exception
+
+   Use of this software in binary or source form is permitted for
+   execution, study, learning, experimentation, provided all terms of this license are followed.
+
+   The academic submission and self-representation restrictions described
+   above apply to all persons except the Owner, Muhammad Talha
+   (GitHub: mtalha-codes), who retains full and unrestricted rights to use
+   this software source code for academic, professional, and commercial
+   self-representation.
+
+4. Enforcement
+   Any violation of these additional terms constitutes a material breach
+   of the license and automatically terminates the rights granted under
+   this license.
+
+----------------------------------------------------------------------
+END OF TERMS
+----------------------------------------------------------------------

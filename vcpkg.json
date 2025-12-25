@@ -5,5 +5,13 @@
     "gmp",
     "mpfr",
     "fmt"
-  ]
+  ],
+  "description": "A custom numerical math dsl built out of curiosity and inspiration from MapleSoft.",
+  "documentation": "README.md",
+  "license": "AGPL-3.0-or-later",
+  "maintainers": [
+    "mtalha-codes"
+  ],
+  "name": "mmqli",
+  "version-string": "v3.0"
 }

@@ -54,3 +54,7 @@ cmake-list-windows
 #VCPKG INSTALLED 
 vcpkg_installed
 .cache 
+
+#CLION GENERATED DIRS
+cmake-build-debug
+cmake-build-release

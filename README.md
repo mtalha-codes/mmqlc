@@ -1,49 +1,63 @@
 # MmQL - The Mathematical Query Language
 
 > [!NOTE]
-> ***I have stopped working on this project and will be rewritten in Rust (After I Learn Rust) and it will have more killer features (Inshallah).***
+> Want to know what is planned about this project ?
+> See [PLANS.md](DetailedDocs/PLANS.md).
 
-**MmQL** is a very lightweight computational query language used to compute operations involving real and complex numbers (the queries are interpreted by **MmQLC**) developed in **C++20**.
+**MmQL** is a very lightweight computational query language used to compute operations involving real and complex
+numbers of arbitrary precision. The interpreter for MmQL is designed in C++20.
 
 ---
 
 ## What is MmQL ?
 
-**MmQL** is an acronym that stands for **M**athe**m**atical **Q**uery **L**anguage. It is an interpreted language as well as a case-sensitive **where uppercase and  lowercase matters**. The interpreter (**MmQLC**) is a custom and yet a very simple interpreter. Techniques like Tokenization and Parsing are used by **MmQLC**.
+**MmQL** is an acronym that stands for **M**athe**m**atical **Q**uery **L**anguage. It is an interpreted by **mmqli** and is also
+a case-sensitive language.
 
-**MmQL** is a lightweight, *cross-platform* query language tailored for mathematical computations. Designed for speed and simplicity, **MmQL** allows users to write precise mathematical queries.
+**MmQL** is a lightweight, *cross-platform* query language tailored for mathematical computations. Designed for speed
+and simplicity, **MmQL** allows users to write precise mathematical queries.
 > [!NOTE]
 >
-> - Please note that **MmQL** is not a symbolic language, and it does not use CAS (Computer Algebra Systems)
-> - **MmQL** is a unique because it does not use an **Abstract Syntax Tree**.
+> - Please note that **MmQL** is not a symbolic language. It does not leverage the use of CAS technologies like WolframAlpha or MapleSoft.
+> - **MmQL** has simpler syntax because it does not construct an AST internally.
 
 ---
 
-## What is MmQLC ?  
+## What is mmqli ?
 
-**MmQLC** stands for **M**athe**m**atical **Q**uery **L**anguage **C**ompiler (although this is an interpreter 😁). It is a **case-sensitive** interpreted query language with a minimalistic syntax, focused on mathematical operations.  
+**mmqli** stands for **m**athe**m**atical **q**uery **l**anguage **i**nterpreter. It is
+a **case-sensitive** interpreted query language with a minimalistic syntax, focused on mathematical operations.
 
-## Key Features  
+## Key Features
 
-- **Portable and Cross-Platform:** The language can run on various platforms by compiling its interpreter for your operating system.  
-- **Lightweight and Efficient:** Perfect for quick and resource-friendly computations.  
-- **Case-Sensitive Syntax:** Commands are interpreted based on their casing.  
-- Specializes in:  
-  - **Real Numbers**  
-  - **Complex Numbers**  
+- **Portable and Cross-Platform:** The language can run on various platforms by compiling its interpreter for your
+  operating system.
+- **Lightweight and Efficient:** Perfect for quick and resource-friendly computations.
+- **Case-Sensitive Syntax:** Commands are interpreted based on their casing.
+- Specializes in:
+    - **Real Numbers**
+    - **Complex Numbers**
 
-**MmQL** is particularly suited for users who need fast, precise calculations without the overhead of complex mathematical software.
+**MmQL** is particularly suited for users who need fast, precise and accurate calculations without the overhead of complex
+mathematical software.
 
 ---
 
-## Why Choose MmQL?  
+## Why Choose MmQL?
 
-**MmQL** provides a lightweight and flexible environment for mathematical queries, perfect for students and professionals looking for:  
+**MmQL** provides a lightweight and flexible environment for mathematical queries, perfect for students and
+professionals looking for:
 
-- A **simple and efficient query language** for real and complex number calculations.  
-- A **cross-platform tool**, for any operating system (Windows, Linux and Mac) via compilation.  
+- A **simple and efficient query language** for calculations involving complex numbers and real numbers of any arbitrary precision.
+- A **cross-platform tool**, for any operating system (Windows, Linux and Mac).
+-
+    - **Windows** and **Linux** binaries will be available in the upcoming release.
+-
+    - For **macOS** however, the inner level CMakeLists.txt is configured, but you will have to compile it on your
+      system.
 
-With its clean syntax and custom interpreter, **MmQL** delivers a tailored solution for performing mathematical computations. Compile **MmQLC** on your preferred OS, and you're ready to handle your queries with speed and precision!
+With its clean syntax and custom interpreter, **MmQL** delivers a tailored solution for performing chunky mathematical
+computations with precision.
 
 ---
 
@@ -65,7 +79,8 @@ This project also have the following build dependencies:
 
 ---
 
-## Setting Up The Environment for Building From Source  
+## Setting Up The Environment for Building From Source
+
 >
 > [!WARNING]
 > Only 64 bit x86 and ARM architectures are supported. We don't plan to support other architectures.
@@ -74,26 +89,26 @@ Building from source is dead simple, just launch your default terminal.
 
 ```bash
 # Clone this repo 
-git clone https://github.com/mtalha-codes/mmqlc.git
+git clone https://github.com/mtalha-codes/mmqli.git
 # navigate to repo
-cd mmqlc
+cd mmqli
 # download dependencies or libraries
 vcpkg install 
 # generate build scripts
-cmake .
+mkdir build && cd build && cmake ..
 # compile and navigate to build directory
-make -j$(nproc) && cd build
+make -j$(nproc)
 # run the interpreter.
-./mmqlc --live
+./mmqli
 ```
 
 ## Supported Queries
 
-Following types of queries are supported by **MmQL**.
+MmQL has mostly the same set of queries overloaded for both real and complex numbers of arbitrary precision. So it all differs by the calling convention.
+Like for real numbers, you'd do `query 3,4` or `query 43+10` or whatever, but on the other hand,
+for complex numbers you'd do `query 3+4i,5-6i` or `query 5e+10+6e-100i`.  
 
-- ### [Queries For Calculations Involving Real Numbers](DetailedDocs/REAL_NUMBERS.md)
-
-- ### [Queries For Calculations Involving Complex Numbers](DetailedDocs/COMPLEX_NUMBERS.md)
+To know about queries, Read [Queries for Real Numbers](DetailedDocs/QUERIES_REAL_NUMBERS.md) and [Queries for Complex Numbers](DetailedDocs/QUERIES_COMPLEX_NUMBERS.md).
 
 ---
 
@@ -103,37 +118,26 @@ The MmQL language only support single-line comments.
 
 **Comment Declaration**:
 Comments looks like this
-
 - `%% Comment`
-
 ---
 
 ## Possible Errors
+
 >
 > [!CAUTION]
-Compound queries or stacking multiple queries on a single line may cause errors.
-Nesting two or more queries or using inline comments will also throw errors.
+> Stacking multiple queries on a single line also causes errors.
+> Nesting two or more queries or using inline comments will also throw errors.
 
 ### Examples of errors
 
-- Compound Queries: `ADD 3,4 FACTORIAL 43`. This is strictly prohibited.
-- Direct Nested Queries: `FACTORIAL ADD 3,4` , `INVERSE_SINE SINE 45`. Can be tackled via variables.
-- Inline Comments: `ADD 4,5 %% add two numbers`. Work In Progress.
+- Compound Queries: `add 3,4 factoral 43`. This is strictly prohibited.
+- Direct Nested Queries: `factorial add 3,4` , `inverse_sine sine 45`.
+- - You can achieve nesting by storing result of each internal query in a variable. See [VARIABLES.md](DetailedDocs/VARIABLES.md) for more details.
+- Inline Comments: `add 4,5 %% add two numbers`. [WIP]
 
 ---
 
-## Our Intentions Regarding this Project
-
-[You can read about it here.](DetailedDocs/PLANS.md)
-
 ## License
 
-This project is protected under a custom license. You are permitted to clone this repository for learning purposes only.
-
-### Key Restrictions
-
-1. Forking and redistribution without permission is prohibited.
-2. The code may not be used for your academic submissions (e.g., final year projects, assignments) or included in resumes/portfolios except the owner(which is ME).
-3. Contributions are allowed only with prior written permission. Email **<muhammadtalha.quant@gmail.com>**
-
-[For more details on license, click to read it](./LICENSE)
+This project is protected under a custom flavor of AGPL v3+ license.
+See [LICENSE](LICENSE) for more details.
