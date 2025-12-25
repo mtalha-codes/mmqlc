@@ -24,51 +24,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cmake.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mmqlc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DetailedDocs/QUERIES_REAL_NUMBERS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/CLInterface.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/CLInterface.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/Core.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/helpers/boost_fwd.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/helpers/constants.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lexer/Lexer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/Parser.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vresolver/VResolver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/DetailedDocs/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/COMPLEX_NUMBERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/DetailedDocs/QUERIES_COMPLEX_NUMBERS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/MMQLC_USE.md" beforeDir="false" afterPath="$PROJECT_DIR$/DetailedDocs/MMQLC_USE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/PLANS.md" beforeDir="false" afterPath="$PROJECT_DIR$/DetailedDocs/PLANS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/REAL_NUMBERS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/VARIABLES.md" beforeDir="false" afterPath="$PROJECT_DIR$/DetailedDocs/VARIABLES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.calculator.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Core.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.constants.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.filesystem.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.functions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/functions.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.multiprecision.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.parser.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/Parser.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.regex.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/grammar/Grammar.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.tokenizer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/Lexer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.ui.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/headers/mmqlc.variables.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/vresolver/VResolver.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vcpkg.json" beforeDir="false" afterPath="$PROJECT_DIR$/vcpkg.json" afterDir="false" />
-    </list>
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,6 +125,7 @@
       <workItem from="1766299936352" duration="7815000" />
       <workItem from="1766373004832" duration="10282000" />
       <workItem from="1766489466728" duration="61000" />
+      <workItem from="1766654645009" duration="76000" />
     </task>
     <servers />
   </component>
