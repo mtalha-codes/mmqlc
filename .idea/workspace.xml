@@ -26,12 +26,14 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cmake.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cmake.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/CLInterface.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/CLInterface.hpp" afterDir="false" />
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="added missing header guard">
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/MMQLC_USE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/MMQLC_USE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/PLANS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/PLANS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/QUERIES_COMPLEX_NUMBERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/QUERIES_COMPLEX_NUMBERS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/QUERIES_REAL_NUMBERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/QUERIES_REAL_NUMBERS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DetailedDocs/VARIABLES.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/VARIABLES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,5 +151,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="MARK_IGNORED_AS_EXCLUDED" value="true" />
+    <MESSAGE value="Project is being refactored, process of refactor has been continued, the commit before this one, was pushed because I had to reinstall the OS" />
+    <MESSAGE value="added missing header guard" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing header guard" />
   </component>
 </project>
