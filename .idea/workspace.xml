@@ -7,6 +7,7 @@
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="27" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -26,19 +27,19 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="added missing header guard">
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/MMQLC_USE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/MMQLC_USE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/PLANS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/PLANS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/QUERIES_COMPLEX_NUMBERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/QUERIES_COMPLEX_NUMBERS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/QUERIES_REAL_NUMBERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/QUERIES_REAL_NUMBERS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DetailedDocs/VARIABLES.md" beforeDir="false" afterPath="$PROJECT_DIR$/Detailed Documentation/VARIABLES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="clion settings; never mind; I am just using clion so it is automatic.">
+      <change afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug_Linux" />
   <component name="Git.Settings">
@@ -89,26 +90,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "CMake Application.mmqlc.executor": "Run",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.advertisement.text.overridden": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/muhammadtalha/vcpkg",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "CMakeSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;CMake Application.mmqlc.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/muhammadtalha/vcpkg&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C++&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/core" />
@@ -153,6 +154,8 @@
     <option name="MARK_IGNORED_AS_EXCLUDED" value="true" />
     <MESSAGE value="Project is being refactored, process of refactor has been continued, the commit before this one, was pushed because I had to reinstall the OS" />
     <MESSAGE value="added missing header guard" />
-    <option name="LAST_COMMIT_MESSAGE" value="added missing header guard" />
+    <MESSAGE value="Changed directory name; from DetailedDocs to Detailed Documentation" />
+    <MESSAGE value="clion settings; never mind; I am just using clion so it is automatic." />
+    <option name="LAST_COMMIT_MESSAGE" value="clion settings; never mind; I am just using clion so it is automatic." />
   </component>
 </project>
