@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > Want to know what is planned about this project ?
-> See [PLANS.md](DetailedDocs/PLANS.md).
+> See [PLANS.md](Detailed Documentation/PLANS.md).
 
 **MmQL** is a very lightweight computational query language used to compute operations involving real and complex
 numbers of arbitrary precision. The interpreter for MmQL is designed in C++20.
@@ -108,7 +108,7 @@ MmQL has mostly the same set of queries overloaded for both real and complex num
 Like for real numbers, you'd do `query 3,4` or `query 43+10` or whatever, but on the other hand,
 for complex numbers you'd do `query 3+4i,5-6i` or `query 5e+10+6e-100i`.  
 
-To know about queries, Read [Queries for Real Numbers](DetailedDocs/QUERIES_REAL_NUMBERS.md) and [Queries for Complex Numbers](DetailedDocs/QUERIES_COMPLEX_NUMBERS.md).
+To know about queries, Read [Queries for Real Numbers](Detailed Documentation/QUERIES_REAL_NUMBERS.md) and [Queries for Complex Numbers](Detailed Documentation/QUERIES_COMPLEX_NUMBERS.md).
 
 ---
 
@@ -132,7 +132,7 @@ Comments looks like this
 
 - Compound Queries: `add 3,4 factoral 43`. This is strictly prohibited.
 - Direct Nested Queries: `factorial add 3,4` , `inverse_sine sine 45`.
-- - You can achieve nesting by storing result of each internal query in a variable. See [VARIABLES.md](DetailedDocs/VARIABLES.md) for more details.
+- - You can achieve nesting by storing result of each internal query in a variable. See [VARIABLES.md](Detailed Documentation/VARIABLES.md) for more details.
 - Inline Comments: `add 4,5 %% add two numbers`. [WIP]
 
 ---
