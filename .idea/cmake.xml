@@ -2,10 +2,9 @@
 <project version="4">
   <component name="CMakeSharedSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug_Windows" ENABLED="false" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Windows" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-static" />
-      <configuration PROFILE_NAME="Release_Windows" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="Windows" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-static" />
-      <configuration PROFILE_NAME="Debug_Linux" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="System" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-linux" />
-      <configuration PROFILE_NAME="Release_Linux" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="System" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-linux" />
+      <configuration PROFILE_NAME="Release_Windows" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="Windows" GENERATION_OPTIONS="-DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-static -DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+      <configuration PROFILE_NAME="Debug_Linux" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="System" GENERATION_OPTIONS="-DVCPKG_TARGET_TRIPLET:STRING=x64-linux -DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake" />
+      <configuration PROFILE_NAME="Release_Linux" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="System" GENERATION_OPTIONS="-DVCPKG_TARGET_TRIPLET:STRING=x64-linux -DCMAKE_TOOLCHAIN_FILE=/home/muhammadtalha/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake" />
     </configurations>
   </component>
 </project>
