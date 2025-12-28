@@ -10,7 +10,6 @@ add_executable(mmqli
         grammar/Grammar.hpp
         core/Core.hpp
         core/helpers/constants.hpp
-        core/helpers/functions.hpp
         lexer/Lexer.hpp
         parser/Parser.hpp
         vresolver/VResolver.hpp
