@@ -27,11 +27,9 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="ignore unnecessary xml files">
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="ide settings; auto updated by clion.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/helpers/functions.hpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +163,9 @@
     <MESSAGE value="complete refactor for trigonometry.hpp" />
     <MESSAGE value="ide settings; auto updated by clion ide" />
     <MESSAGE value="ignore unnecessary xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore unnecessary xml files" />
+    <MESSAGE value="completed refactor of combinatorics.hpp" />
+    <MESSAGE value="deleted file functions.hpp" />
+    <MESSAGE value="ide settings; auto updated by clion." />
+    <option name="LAST_COMMIT_MESSAGE" value="ide settings; auto updated by clion." />
   </component>
 </project>
