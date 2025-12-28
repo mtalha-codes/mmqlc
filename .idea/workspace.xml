@@ -27,11 +27,11 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="clion settings; never mind; I am just using clion so it is automatic.">
-      <change afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="ignore unnecessary xml files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/helpers/functions.hpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +120,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mmqli" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mmqli" TARGET_NAME="mmqli" CONFIG_NAME="Release_Windows" RUN_TARGET_PROJECT_NAME="mmqli" RUN_TARGET_NAME="mmqli">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -156,6 +161,10 @@
     <MESSAGE value="added missing header guard" />
     <MESSAGE value="Changed directory name; from DetailedDocs to Detailed Documentation" />
     <MESSAGE value="clion settings; never mind; I am just using clion so it is automatic." />
-    <option name="LAST_COMMIT_MESSAGE" value="clion settings; never mind; I am just using clion so it is automatic." />
+    <MESSAGE value="added .clang-tidy ruleset" />
+    <MESSAGE value="complete refactor for trigonometry.hpp" />
+    <MESSAGE value="ide settings; auto updated by clion ide" />
+    <MESSAGE value="ignore unnecessary xml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore unnecessary xml files" />
   </component>
 </project>
