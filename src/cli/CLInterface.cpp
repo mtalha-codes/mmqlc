@@ -11,8 +11,8 @@
  * @note This function is only compiled on Windows.
  */
 inline void enable_virtual_terminal_processing() {
-    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-    DWORD dwMode = 0;
+    HANDLE hOut { GetStdHandle(STD_OUTPUT_HANDLE) };
+    DWORD dwMode {0};
 
     if (hOut == INVALID_HANDLE_VALUE)
         return;
@@ -74,10 +74,10 @@ void mmqli::cli::CLInterface::clear_screen_platform_agnostic() {
  * 2. an empty line
  * 3. or a variable declaration line
  *
- * after that it tokenize the query, parse the query and pass it to the core class, and then it returns the result and print the calculated result.
+ * after that it tokenize the query, parse the query and pass it to the Core class, and then it returns the result and print the calculated result.
  */
 void mmqli::cli::CLInterface::start_interpreter() {
-    constexpr auto help = "help";
+    constexpr auto help{"help"};
     print_copyright_notice();
     fmt::print("\n");
     fmt::print(fg(fmt::color::white) | fmt::emphasis::bold, "mmqlc: ");
@@ -85,35 +85,35 @@ void mmqli::cli::CLInterface::start_interpreter() {
     fmt::print("type '{}' to show session-specific commands. \n\n",
                fmt::format(fg(fmt::color::white) | fmt::emphasis::italic, help)
     );
-    std::string query;
-    std::unordered_map<std::string, std::string> variables_hashtable;
-    auto empty_line = [](const std::string &q) { return q.empty(); };
-    auto commented_line = [](const std::string &q) {
+    std::string query{};
+    std::unordered_map<std::string, std::string> variables_hashtable{};
+    auto empty_line { [](const std::string &q) { return q.empty(); } };
+    auto commented_line { [](const std::string &q) {
         return q.rfind("%%", 0) == 0;
-    };
-    auto var_declaration_line = [](const std::string &q) {
+    } };
+    auto var_declaration_line { [](const std::string &q) {
         return q.rfind("set", 0) == 0;
-    };
+    } };
     while (true) {
-        fmt::print(fg(fmt::color::cyan), ">>> ");
+        fmt::print(fg(fmt::color::cyan), "|>> ");
         std::getline(std::cin, query);
         if (empty_line(query) || commented_line(query))
             continue;
-        if (constexpr auto clear = "clear"; query == clear) {
+        if (constexpr auto clear{"clear"}; query == clear) {
             clear_screen_platform_agnostic();
             continue;
         }
-        if (constexpr auto quit = "quit"; query == quit)
+        if (constexpr auto quit{"quit"}; query == quit)
             break;
-        if (constexpr auto flushmem = "flushmem"; query == flushmem) {
+        if (constexpr auto flushmem {"flushmem"}; query == flushmem) {
             variables_hashtable.clear();
             clear_screen_platform_agnostic();
             continue;
         }
         if (var_declaration_line(query)) {
-            for (auto kp = find_and_resolve_vars({query}, variables_hashtable);
+            for (auto kp {find_and_resolve_vars({query}, variables_hashtable)};
                  const auto &[varName, varValue]: kp)
-                // this loop will always have one pass
+                // this loop will always have one pass, because find_and_resolve_vars will return map of size 1 due to single query string containing the signs of variable.
                 variables_hashtable[varName] = varValue;
             continue;
         }
@@ -125,15 +125,15 @@ void mmqli::cli::CLInterface::start_interpreter() {
             );
             continue;
         }
-        const auto answer = [&]() {
+        const auto result{  [&]() {
             const auto token = tokenize({query}, variables_hashtable);
             const auto parse_ptr = std::make_unique<Parser>(token);
             const auto ansPTR = std::make_unique<Core>(
                 parse_ptr->parse_RealNums(), parse_ptr->parse_cmplxNums());
             return ansPTR->calculateAnswers()[0];
-        }();
+        }() };
         fmt::print(fg(fmt::color::white) | fmt::emphasis::bold, "{}\n",
-                   answer.substr(answer.find('=') + 2)); // Skip "= "
+                   result.substr(result.find('=') + 2)); // Skip "= "
     }
 }
 
