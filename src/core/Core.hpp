@@ -9,7 +9,6 @@ template<typename T>
 concept RealComplex = Real<T> || Complex<T>; // either real number or complex number.
 
 namespace mmqli::core {
-
     using ParsedRealQuery = std::tuple<std::string, float1000, float1000>;
     using ParsedRealQueries = std::vector<ParsedRealQuery>;
     using ParsedComplexQuery = std::tuple<std::string, complex1000, complex1000>;
@@ -24,6 +23,13 @@ class Core {
     static std::string to_str(const complex1000 &complex);
     static std::string to_str(const float1000 &real);
 
+    bool calculate_real_queries_double_operands(const std::string& query, const float1000& first_operand, const float1000& second_operand);
+    bool calculate_real_queries_single_operand(const std::string& query, const float1000& operand);
+    void process_real_queries();
+
+    bool calculate_complex_queries_double_operands(const std::string& query, const complex1000& first_operand, const complex1000& second_operand);
+    bool calculate_complex_queries_single_operand(const std::string& query, const complex1000& operand);
+    void process_complex_queries();
     /**
      * This function build the answer string from the components. This is a templated function and by ODR, it is defined and implemented here.
      * @param q The query string
