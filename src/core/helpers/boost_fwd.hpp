@@ -10,7 +10,7 @@ using float1000 = boost::multiprecision::mpfr_float_1000;
 using complex1000 = std::complex<float1000>;
 
 template<typename T>
-   concept Real = requires(T p)
+concept Real = requires(T p)
 {
     {p.str()} -> std::same_as<std::string>;
 };
