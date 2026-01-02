@@ -7,7 +7,7 @@
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="27" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="Cpp.Editor" type="string" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -27,9 +27,11 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="ide settings; auto updated by clion.">
+    <list default="true" id="595d3c2d-be5a-49be-b813-ed095d933682" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Core.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Core.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/helpers/constants.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/helpers/constants.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,26 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug_Linux" />
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+    <option name="myAllFileTypesSelected" value="false" />
+    <option name="mySelectedFileTypes">
+      <set>
+        <option value="C/C++" />
+        <option value="C/C++ Header" />
+        <option value="JSON" />
+        <option value="JSON-lines" />
+        <option value="JSON5" />
+        <option value="Markdown" />
+        <option value="Python" />
+        <option value="PythonStub" />
+        <option value="SQL" />
+        <option value="Shell Script" />
+        <option value="TOML" />
+        <option value="YAML" />
+      </set>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -61,12 +83,14 @@
     <setting file="file://$PROJECT_DIR$/src/core/helpers/boost_fwd.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/core/helpers/combinatorics.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/core/helpers/constants.hpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/core/helpers/functions.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/core/helpers/trigonometry.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="2gFOvV4J" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -80,6 +104,7 @@
   <component name="ProjectId" id="36sAZkAKdhsw9zzly2fb7lQmq20" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
   </component>
   <component name="ProjectStatusUIService">{
   &quot;uiKindId&quot;: &quot;Widget&quot;
@@ -105,7 +130,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/muhammadtalha/vcpkg&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C++&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -118,11 +143,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mmqli" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mmqli" TARGET_NAME="mmqli" CONFIG_NAME="Release_Windows" RUN_TARGET_PROJECT_NAME="mmqli" RUN_TARGET_NAME="mmqli">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -153,8 +173,21 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="MARK_IGNORED_AS_EXCLUDED" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Project is being refactored, process of refactor has been continued, the commit before this one, was pushed because I had to reinstall the OS" />
     <MESSAGE value="added missing header guard" />
     <MESSAGE value="Changed directory name; from DetailedDocs to Detailed Documentation" />
@@ -166,6 +199,13 @@
     <MESSAGE value="completed refactor of combinatorics.hpp" />
     <MESSAGE value="deleted file functions.hpp" />
     <MESSAGE value="ide settings; auto updated by clion." />
-    <option name="LAST_COMMIT_MESSAGE" value="ide settings; auto updated by clion." />
+    <MESSAGE value="properly documented the file, with Doxygen comments" />
+    <MESSAGE value="ide settings; auto updated by clion" />
+    <MESSAGE value="changed init style to universal init" />
+    <MESSAGE value="refactor in progress for these two files;" />
+    <MESSAGE value="formatted boost_fwd.hpp" />
+    <MESSAGE value="split one monolithic function previously known as `calculateAnswers` to 6 sub-functions for better readability, scalability in the future." />
+    <MESSAGE value="removed space from the folder name to render correctly in README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed space from the folder name to render correctly in README.md" />
   </component>
 </project>
