@@ -3,7 +3,7 @@
 > [!NOTE]
 > Want to know what is planned about this project ?
 > See [PLANS.md](DetailedDocumentation/PLANS.md).
-> This project is being refactored, but since my machine is now malfunctioning due to over-heating and it should malfunction because it is almost a decade old now...., so now the work is stopped due to that reason. I know that I added this statement about after 15 days(or just the last commit), since then the work is stopped.
+> - This project is being refactored, but since my machine is now malfunctioning due to over-heating and it should malfunction because it is almost a decade old now...., so now the work is stopped due to that reason. I know that I added this statement about after 15 days(or just the last commit), since then the work is stopped.
 
 **MmQL** is a very lightweight computational query language used to compute operations involving real and complex
 numbers of arbitrary precision. The interpreter for MmQL is designed in C++20.
